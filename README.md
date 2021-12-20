@@ -1,37 +1,33 @@
-![image](https://github.com/amberwnaushahi/Amazon_Vine_Analysis/blob/main/Images/Header.png)
+
 
 # Amazon_Vine_Analysis
 
 ## Background
 
-The objective of this challenge is to analyze Amazon reviews written by members of the paid Amazon Vine program for Kitchen products. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. Companies like SellBy pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review.
-
-PySpark was used to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. Next,  using PySpark, I determined if there is any bias toward favorable reviews from Vine members in the dataset so that SellBy stakeholders can assess if membership to the Vine program is going to be beneficial.
+The objective of this challenge is to analyze Amazon reviews written by members of the paid Amazon Vine program for Kitchen products. The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. 
 
 ## Resources 
 
-* [DataSet - Kitchen Gadgets Reviews](https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Kitchen_v1_00.tsv.gz)
-
 * Technologies Used
-  * Google Colab (to run PySpark)
   * AWS S3 and RDS
-  * PostgreSQL
+  * PostgreSQL and pgAdmin
+  * Google Colab (to run PySpark)
 
 ## Vine Analysis
 
 The following table show the information of the dataset organized into a data-frame exclusively displaying the information we require for our analysis. The data-frame was then filtered to only include relevant data; in this case we are only examining the products which have over 20 reviews, and a ratio of helpful reviews over 50%.
 
-![image](https://github.com/amberwnaushahi/Amazon_Vine_Analysis/blob/main/Images/Filtered_table_all.PNG)
+![image](https://github.com/sanjal7137/Amazon_Vine_Analysis/blob/7435a49046edae0a0474917de1d1d3f7eb6c7485/images/vinefiltered.png)
 
 The next two tables filter the previous data-frame even further by splitting the table into two data-frames. One data-frame containing only reviews from paid Vine members, and the other containing only reviews from non-Vine members.
 
-![image](https://github.com/amberwnaushahi/Amazon_Vine_Analysis/blob/main/Images/Filtered_table_vine.PNG)
+![image](https://github.com/sanjal7137/Amazon_Vine_Analysis/blob/7435a49046edae0a0474917de1d1d3f7eb6c7485/images/paid.png)
 
-![image](https://github.com/amberwnaushahi/Amazon_Vine_Analysis/blob/main/Images/Filtered_table_non-vine.PNG)
+![image](https://github.com/sanjal7137/Amazon_Vine_Analysis/blob/7435a49046edae0a0474917de1d1d3f7eb6c7485/images/unpaid.png)
 
 ## Results
 
-![image](https://github.com/amberwnaushahi/Amazon_Vine_Analysis/blob/main/Images/results.PNG)
+![image](https://github.com/sanjal7137/Amazon_Vine_Analysis/blob/5fc46ef59d2d7ee4e820fd3171d4e794a9a96288/images/re.png)
 
 ### Number of Reviews:
 * Vine Reviews: 1,158
